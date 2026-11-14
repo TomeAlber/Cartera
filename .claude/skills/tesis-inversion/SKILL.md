@@ -16,7 +16,7 @@ Responde siempre en castellano de España.
 1. Busca y utiliza los **datos financieros más recientes disponibles**: último 10-K/20-F (o informe anual equivalente), última earnings call, precio de cotización actual y consenso de analistas.
 2. Si algún dato clave no está disponible, **indícalo explícitamente** en lugar de estimarlo sin avisar. Cuando estimes algo, márcalo como estimación y explica cómo lo has calculado.
 3. Lee, antes o después de redactar la tesis, **Substack, X y otras fuentes** (foros, blogs de inversores, prensa financiera) para ver qué se dice sobre la empresa y contrastar el sentimiento del mercado con tu análisis.
-4. Para el **encaje en la cartera**, consulta la cartera actual del usuario en `index.html` de este repositorio (el array de posiciones con `ticker` y número de acciones) y ten en cuenta concentración, solapamientos sectoriales/geográficos y correlación con las posiciones existentes.
+4. Para el **encaje en la cartera**, consulta la cartera actual del usuario en el artefacto **«Mi Cartera»** (https://claude.ai/artifact/9Jy7dc88XdJuzgF9Cvk8cC). Lee su base de datos con la herramienta `ArtifactData` (acción `list`): colección `posiciones` (ticker, nombre, categoría, divisa, acciones, coste medio, precio), `config/efectivo` (liquidez) y `config/fx` (tipos de cambio); consulta también `tesis` y `seguimiento` para ver tesis previas y empresas vigiladas. Si no puedes acceder al artefacto, dilo explícitamente. Ten en cuenta peso relativo, concentración, solapamientos sectoriales/geográficos, divisa y correlación con las posiciones existentes.
 5. Cita las fuentes y la fecha de los datos (precio, consenso, informes).
 
 ## Estructura de la tesis
