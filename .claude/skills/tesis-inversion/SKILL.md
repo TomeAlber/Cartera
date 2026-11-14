@@ -62,6 +62,20 @@ Responde siempre en castellano de España.
 - Recomendación clara: **Comprar / Mantener en watchlist / Evitar**.
 - Nivel de convicción (**alto / medio / bajo**) y las 1-2 condiciones que cambiarían el veredicto.
 
+## Al terminar: preguntar por la watchlist
+
+Cuando hayas entregado la tesis completa, **pregunta siempre al usuario** (con `AskUserQuestion`) si quiere añadir la empresa a la watchlist (lista **Seguimiento** del artefacto «Mi Cartera»). No la añadas sin su confirmación.
+
+Si dice que sí, escribe un documento en la colección `seguimiento` del artefacto (https://claude.ai/artifact/9Jy7dc88XdJuzgF9Cvk8cC) con `ArtifactData`. Usa como id el ticker en mayúsculas (p. ej. `ITX.MC`); si ya existe, actualízalo en lugar de duplicarlo. Campos:
+- `nombre`, `ticker`, `mercado`, `divisa`
+- `veredicto` (Comprar / Mantener en watchlist / Evitar) y `conviccion` (Alta / Media / Baja)
+- `precio` (precio actual, número), `actualizado` y `fechaTesis` (fecha AAAA-MM-DD)
+- `disparador` (precio de entrada, número) o `disparadorTexto` si la entrada depende de una condición y no de un precio
+- `condiciones` (lista con las 1-2 condiciones que cambiarían el veredicto)
+- `valor` (una frase con el valor intrínseco estimado por escenario)
+- `resumen` (la tesis en 2-3 frases), `aFavor`, `enContra`, `datos`, `hitos`, `rupturas` (listas de frases cortas)
+- `secciones` (lista de `{titulo, texto}` con las secciones de la tesis), `fuentes` (lista de `{t, u}`) y `doc` (enlace a la tesis completa si la has publicado)
+
 ## Formato de salida
 - Usa **tablas** para todos los datos cuantitativos (fundamentales, comparativa competitiva, DCF, múltiplos).
 - Prosa **directa y escéptica** para el análisis cualitativo. Evita el lenguaje promocional.
