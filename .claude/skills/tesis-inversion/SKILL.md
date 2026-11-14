@@ -16,7 +16,7 @@ Responde siempre en castellano de España.
 1. Busca y utiliza los **datos financieros más recientes disponibles**: último 10-K/20-F (o informe anual equivalente), última earnings call, precio de cotización actual y consenso de analistas.
 2. Si algún dato clave no está disponible, **indícalo explícitamente** en lugar de estimarlo sin avisar. Cuando estimes algo, márcalo como estimación y explica cómo lo has calculado.
 3. Lee, antes o después de redactar la tesis, **Substack, X y otras fuentes** (foros, blogs de inversores, prensa financiera) para ver qué se dice sobre la empresa y contrastar el sentimiento del mercado con tu análisis.
-4. Para el **encaje en la cartera**, consulta la cartera actual del usuario en el artefacto **«Mi Cartera»** (https://claude.ai/artifact/9Jy7dc88XdJuzgF9Cvk8cC). Lee su base de datos con la herramienta `ArtifactData` (acción `list`): colección `posiciones` (ticker, nombre, categoría, divisa, acciones, coste medio, precio), `config/efectivo` (liquidez) y `config/fx` (tipos de cambio); consulta también `tesis` y `seguimiento` para ver tesis previas y empresas vigiladas. Si no puedes acceder al artefacto, dilo explícitamente. Ten en cuenta peso relativo, concentración, solapamientos sectoriales/geográficos, divisa y correlación con las posiciones existentes.
+4. Para la **compatibilidad con la cartera** (sección 8), consulta la cartera actual del usuario en el artefacto **«Mi Cartera»** (https://claude.ai/artifact/9Jy7dc88XdJuzgF9Cvk8cC). Lee su base de datos con la herramienta `ArtifactData` (acción `list`): colección `posiciones` (ticker, nombre, categoría, divisa, acciones, coste medio, precio), `config/efectivo` (liquidez) y `config/fx` (tipos de cambio); consulta también `tesis` y `seguimiento` para ver tesis previas y empresas vigiladas. Si no puedes acceder al artefacto, dilo explícitamente. Ten en cuenta peso relativo, concentración, solapamientos sectoriales/geográficos, divisa y correlación con las posiciones existentes.
 5. Cita las fuentes y la fecha de los datos (precio, consenso, informes).
 
 ## Estructura de la tesis
@@ -26,7 +26,7 @@ Responde siempre en castellano de España.
 - Fuentes de ingresos concretas: ¿de qué segmentos/productos/geografías proviene el grueso del beneficio operativo?
 - Clasifica su ventaja competitiva principal (efecto red, costes de cambio, activos intangibles, ventaja de escala, ventaja regulatoria) y justifica por qué.
 - Análisis crítico: ¿el foso se está ampliando o erosionando?
-- Analiza si es un negocio **growth o value** (no se descarta ninguna filosofía) y su **encaje en la cartera** del usuario.
+- Analiza si es un negocio **growth o value** (no se descarta ninguna filosofía) (el análisis detallado del encaje con la cartera va en la sección 8).
 
 ### 2. Mapa competitivo
 - Identifica los 2-3 competidores más relevantes.
@@ -58,7 +58,16 @@ Responde siempre en castellano de España.
 - **Múltiplos**: P/E forward y EV/EBITDA forward actuales frente a la media histórica de 5 años de la empresa y frente a la mediana de su sector.
 - **Margen de seguridad**: dado el precio actual, margen de seguridad implícito en cada escenario.
 
-### 8. Veredicto
+### 8. Compatibilidad con mi cartera
+Usa siempre la cartera real del artefacto «Mi Cartera» (posiciones, efectivo y tipos de cambio, convertidos a euros). Si no puedes leerla, dilo y no inventes la composición.
+- Tabla resumen de la cartera actual: peso de cada posición, y reparto por sector/categoría, geografía y divisa.
+- **Solapamientos**: ¿duplica la exposición a una posición, sector, factor (growth, momentum, tipos de interés, ciclo) o tema que ya tienes? ¿Comparte riesgos con alguna posición (mismo cliente, misma cadena de suministro, misma sensibilidad macro)?
+- **Diversificación**: ¿aporta algo que la cartera no tenga (sector, geografía, divisa, perfil value/defensivo frente a growth) o concentra más?
+- **Comparación con lo que ya tienes**: ¿es mejor idea que alguna posición actual comparable? Si lo es, indica cuál podría reducirse o venderse para financiarla.
+- **Tamaño de posición sugerido**: peso objetivo (% y € sobre el patrimonio total) según convicción y riesgo, si se financiaría con efectivo o vendiendo otra posición, y una tabla con los pesos antes y después de la compra.
+- Conclusión: compatibilidad **alta / media / baja** con la cartera, justificada.
+
+### 9. Veredicto
 - Recomendación clara: **Comprar / Mantener en watchlist / Evitar**.
 - Nivel de convicción (**alto / medio / bajo**) y las 1-2 condiciones que cambiarían el veredicto.
 
@@ -77,6 +86,6 @@ Si dice que sí, escribe un documento en la colección `seguimiento` del artefac
 - `secciones` (lista de `{titulo, texto}` con las secciones de la tesis), `fuentes` (lista de `{t, u}`) y `doc` (enlace a la tesis completa si la has publicado)
 
 ## Formato de salida
-- Usa **tablas** para todos los datos cuantitativos (fundamentales, comparativa competitiva, DCF, múltiplos).
+- Usa **tablas** para todos los datos cuantitativos (fundamentales, comparativa competitiva, DCF, múltiplos, compatibilidad con la cartera).
 - Prosa **directa y escéptica** para el análisis cualitativo. Evita el lenguaje promocional.
 - Extensión: análisis completo y profundo, sin relleno.
