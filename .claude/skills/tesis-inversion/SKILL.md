@@ -26,7 +26,7 @@ Responde siempre en castellano de España.
 - Fuentes de ingresos concretas: ¿de qué segmentos/productos/geografías proviene el grueso del beneficio operativo?
 - Clasifica su ventaja competitiva principal (efecto red, costes de cambio, activos intangibles, ventaja de escala, ventaja regulatoria) y justifica por qué.
 - Análisis crítico: ¿el foso se está ampliando o erosionando?
-- Analiza si es un negocio **growth o value** (no se descarta ninguna filosofía) (el análisis detallado del encaje con la cartera va en la sección 8).
+- Analiza si es un negocio **growth o value** (no se descarta ninguna filosofía). El análisis detallado del encaje con la cartera va en la sección 8.
 
 ### 2. Mapa competitivo
 - Identifica los 2-3 competidores más relevantes.
